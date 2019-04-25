@@ -246,7 +246,7 @@ import class Foundation.ProcessInfo
 if ProcessInfo.processInfo.environment["SWIFTPM_BOOTSTRAP"] == nil {
     if ProcessInfo.processInfo.environment["SWIFTCI_USE_LOCAL_DEPS"] == nil {
         package.dependencies += [
-            .package(url: "https://github.com/gonsolo/swift-llbuild.git", .branch("master")),
+            .package(url: "https://github.com/gonsolo/swift-llbuild.git", from: "0.4.0"),
         ]
     } else {
         // In Swift CI, use a local path to llbuild to interoperate with tools
